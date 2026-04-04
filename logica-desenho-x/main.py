@@ -24,27 +24,25 @@ def desenhando_x (valor):
     i = 0           #contador para a parte de cima do X.
     j = 0           #cont para a parte de baixo.
 
-    """ eu preciso pensar em alguma forma de primeiro, imprimir o X, dar uma série de espaços
-    na qual pode ter algum calculo que faça valor -2, enquanto dar espaços antes o segunda
-    linha em diante. """
 
+    if 
 
     metade = (valor // 2)
+    valor_metade = metade
+
 
     for i in range(metade):
-        print(f"{' '*i}")
+        if (i == 0):
+            print(f"X{' '*valor_metade}X")
+            valor_metade -= 1
+        
+        else:
+            print(f"{' '*valor_metade}X{' '*valor_metade}X")
 
-        for j in range(metade):
-            print(f"X{' '*valor}X")
-            valor -= 1
+        
+        
 
-    for i in range(metade, 0):
-        print(f"{' '*i}")
-
-        for j in range(metade):
-            print(f"X{' '*valor}X")
-            valor += 1
-
+        
 
 #################################################
 
