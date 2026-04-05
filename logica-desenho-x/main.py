@@ -18,31 +18,51 @@ def repeat_question():
         except ValueError:
             print("\nSelecione uma opção válida")
 
+########################################################################
 
 def desenhando_x (valor):
-    metade = 0
-    i = 0           #contador para a parte de cima do X.
-    j = 0           #cont para a parte de baixo.
 
+    if (valor % 2 == 0):
+        metade = (valor // 2)
+        valor_metade = metade
 
-    if 
+        for i in range(metade):
+            if (i == 0):
+                print(f"X{' '*valor_metade}X")
+                valor_metade -= 1
+            
+            else:
+                print(f"{' '*valor_metade}X{' '*valor_metade}X")
 
-    metade = (valor // 2)
-    valor_metade = metade
+    else:
+        metade = (valor // 2) + 1
+        espaco_dentro = metade
+        espaco_fora = 1
 
-
-    for i in range(metade):
-        if (i == 0):
-            print(f"X{' '*valor_metade}X")
-            valor_metade -= 1
+        for i in range(metade):
+            if i == 0:
+                print(f"X{' ' * espaco_dentro}X")
+                espaco_dentro -= 2
+            
+            elif i == (metade - 1):
+                print(f"{' ' * espaco_fora }X")
+            
+            else:
+                print(f"{' ' * espaco_fora}X{' ' * espaco_dentro}X")
+                espaco_fora += 1
+                espaco_dentro -= 2
         
-        else:
-            print(f"{' '*valor_metade}X{' '*valor_metade}X")
+        espaco_fora -= 1
 
-        
-        
+        for i in range(metade - 1):
+            print(f"{' ' * espaco_fora}X{' ' * espaco_dentro}X")
+            espaco_fora -= 1
+            espaco_dentro += 2
 
-        
+
+
+
+
 
 #################################################
 
